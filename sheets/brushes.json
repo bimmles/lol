@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "brushes": [
+    {"id":"arena_floor","mins":[-1024,-1024,-64],"maxs":[1024,1024,0],"material":"concrete/concretefloor002","role":"sealed arena floor"},
+    {"id":"wall_west","mins":[-1024,-1024,0],"maxs":[-960,1024,512],"material":"brick/brickwall001","role":"outer wall"},
+    {"id":"wall_east","mins":[960,-1024,0],"maxs":[1024,1024,512],"material":"brick/brickwall001","role":"outer wall"},
+    {"id":"wall_south","mins":[-960,-1024,0],"maxs":[960,-960,512],"material":"brick/brickwall001","role":"outer wall"},
+    {"id":"wall_north","mins":[-960,960,0],"maxs":[960,1024,512],"material":"brick/brickwall001","role":"outer wall"},
+    {"id":"arena_ceiling","mins":[-1024,-1024,512],"maxs":[1024,1024,576],"material":"concrete/concretefloor002","role":"sealed warehouse ceiling"},
+    {"id":"inner_west_a","mins":[-576,-960,0],"maxs":[-512,-128,256],"material":"brick/brickwall002","role":"western zombie lane divider"},
+    {"id":"inner_west_b","mins":[-576,128,0],"maxs":[-512,960,256],"material":"brick/brickwall002","role":"western zombie lane divider"},
+    {"id":"inner_east_a","mins":[512,-960,0],"maxs":[576,-128,256],"material":"brick/brickwall002","role":"eastern zombie lane divider"},
+    {"id":"inner_east_b","mins":[512,128,0],"maxs":[576,960,256],"material":"brick/brickwall002","role":"eastern zombie lane divider"},
+    {"id":"inner_south_a","mins":[-960,-576,0],"maxs":[-128,-512,256],"material":"brick/brickwall002","role":"southern zombie lane divider"},
+    {"id":"inner_south_b","mins":[128,-576,0],"maxs":[960,-512,256],"material":"brick/brickwall002","role":"southern zombie lane divider"},
+    {"id":"inner_north_a","mins":[-960,512,0],"maxs":[-128,576,256],"material":"brick/brickwall002","role":"northern zombie lane divider"},
+    {"id":"inner_north_b","mins":[128,512,0],"maxs":[960,576,256],"material":"brick/brickwall002","role":"northern zombie lane divider"}
+  ]
+}

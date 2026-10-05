@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "launch": {
+    "entrypoint": "launcher/FourCornersLauncher.exe",
+    "entrySource": "launcher/FourCornersLauncher.cs",
+    "hostGame": "team-fortress-2",
+    "requiredSourceGame": "left-4-dead-2",
+    "hostAppId": "440",
+    "sourceAppId": "550",
+    "gameFolderArgument": "Melty-provided TF2 install folder",
+    "meltyArguments": ["--tf2-root", "{game}"],
+    "sourceGameDiscovery": "Steam libraryfolders.vdf plus appmanifest_550.acf; never prompt for a path",
+    "sourceAsset": "left4dead2/sound/music/zombat/snare_horde_01_01a.wav",
+    "modDirectory": "tf/custom/holdout_fourcorners",
+    "cueDestinationRelativePath": "sound/music/zombat/snare_horde_01_01a.wav",
+    "runtimeDestination": "{TF2 install}/tf/custom/holdout_fourcorners/sound/music/zombat/snare_horde_01_01a.wav",
+    "mapPackage": "{TF2 install}/tf/custom/holdout_fourcorners/maps/zf_fourcorners.bsp",
+    "mapName": "zf_fourcorners",
+    "launchArguments": ["-insecure", "-console", "+sv_lan", "0", "+sv_use_steam_networking", "1", "+maxplayers", "4", "+map", "zf_fourcorners"],
+    "joinMethod": "manual Steam friend invite or in-game join; do not declare an automatic connect recipe unless a two-instance test proves it",
+    "secretHandling": "no credentials, tokens, or account data are read or stored",
+    "safety": "do not connect this modded client to VAC-secured servers",
+    "sourceFileRedistributed": false
+  }
+}

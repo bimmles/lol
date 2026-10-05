@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "project": {
+    "workingTitle": "Holdout: Four Corners",
+    "kind": "existing-game mashup mod",
+    "oneSentence": "Four TF2 classes fortify an arena, then survive an escalating skeleton horde cued by Left 4 Dead 2's horde warning music.",
+    "hostGame": "team-fortress-2",
+    "requiredGames": [
+      {
+        "slug": "team-fortress-2",
+        "role": "The game the player launches; supplies classes, buildings, arena play, zombies, and stock assets.",
+        "installFolder": "{game}",
+        "modFolder": "tf/custom",
+        "installedBuildId": "25687524",
+        "installedPatchVersion": "11076587"
+      },
+      {
+        "slug": "left-4-dead-2",
+        "role": "Required sound source; its horde warning cue is copied from the player's installed game at launch.",
+        "installFolder": "player-owned Left 4 Dead 2 install",
+        "sourceRelativePath": "left4dead2/sound/music/zombat/snare_horde_01_01a.wav",
+        "installedBuildId": "23990068",
+        "installedPatchVersion": "2.2.4.3",
+        "redistributedGameFiles": false
+      }
+    ],
+    "arena": {
+      "mapName": "zf_fourcorners",
+      "mapTitle": "Four Corners Holdout",
+      "worldMaterialPolicy": "reference stock TF2 materials from the player's installed game; embed no Valve textures/models",
+      "arenaBounds": {"mins":[-1024,-1024,-64],"maxs":[1024,1024,576]},
+      "survivorTeam": 2,
+      "maxPlayers": 4,
+      "fortifySeconds": 60,
+      "holdoutSeconds": 300,
+      "waveEscalationsAtRemainingSeconds": [180, 60],
+      "initialActiveSkeletonsPerEntrance": 1,
+      "activeSkeletonsPerEntranceAtEscalationOne": 2,
+      "activeSkeletonsPerEntranceAtEscalationTwo": 3,
+      "entranceCount": 3,
+      "privateLaunchSafety": "-insecure; do not join VAC-secured servers",
+      "multiplayerState": "four-player target selected by user; host/join and actual capacity still require a two-instance test"
+    }
+  }
+}

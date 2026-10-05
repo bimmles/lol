@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "entities": [
+    {"id":"game_rules","classname":"tf_gamerules","origin":[0,0,0],"keys":{"targetname":"holdout_rules"},"outputs":[]},
+    {"id":"round_timer","classname":"team_round_timer","origin":[0,0,0],"keys":{"targetname":"holdout_clock","timer_length":"300","max_length":"300","start_paused":"0","setup_length":"60","reset_time":"1","auto_countdown":"1","show_time_remaining":"1","show_in_hud":"1"},"outputs":[
+      {"event":"OnSetupFinished","target":"horde_warning","input":"PlaySound","parameter":"","delay":"0","times":"1"},
+      {"event":"OnSetupFinished","target":"zombie_north","input":"Enable","parameter":"","delay":"8","times":"1"},
+      {"event":"OnSetupFinished","target":"zombie_east","input":"Enable","parameter":"","delay":"8","times":"1"},
+      {"event":"OnSetupFinished","target":"zombie_west","input":"Enable","parameter":"","delay":"8","times":"1"},
+      {"event":"On3MinRemain","target":"zombie_north","input":"SetMaxActiveZombies","parameter":"2","delay":"0","times":"1"},
+      {"event":"On3MinRemain","target":"zombie_east","input":"SetMaxActiveZombies","parameter":"2","delay":"0","times":"1"},
+      {"event":"On3MinRemain","target":"zombie_west","input":"SetMaxActiveZombies","parameter":"2","delay":"0","times":"1"},
+      {"event":"On1MinRemain","target":"zombie_north","input":"SetMaxActiveZombies","parameter":"3","delay":"0","times":"1"},
+      {"event":"On1MinRemain","target":"zombie_east","input":"SetMaxActiveZombies","parameter":"3","delay":"0","times":"1"},
+      {"event":"On1MinRemain","target":"zombie_west","input":"SetMaxActiveZombies","parameter":"3","delay":"0","times":"1"},
+      {"event":"OnFinished","target":"round_win","input":"RoundWin","parameter":"","delay":"0","times":"1"}
+    ]},
+    {"id":"round_win","classname":"game_round_win","origin":[0,0,0],"keys":{"targetname":"round_win","TeamNum":"2","force_map_reset":"0","switch_teams":"0"},"outputs":[]},
+    {"id":"spawn_red_1","classname":"info_player_teamspawn","origin":[-128,-128,32],"keys":{"targetname":"red_spawn_1","TeamNum":"2","spawnflags":"511","SpawnMode":"0"},"outputs":[]},
+    {"id":"spawn_red_2","classname":"info_player_teamspawn","origin":[128,-128,32],"keys":{"targetname":"red_spawn_2","TeamNum":"2","spawnflags":"511","SpawnMode":"0"},"outputs":[]},
+    {"id":"spawn_red_3","classname":"info_player_teamspawn","origin":[-128,128,32],"keys":{"targetname":"red_spawn_3","TeamNum":"2","spawnflags":"511","SpawnMode":"0"},"outputs":[]},
+    {"id":"spawn_red_4","classname":"info_player_teamspawn","origin":[128,128,32],"keys":{"targetname":"red_spawn_4","TeamNum":"2","spawnflags":"511","SpawnMode":"0"},"outputs":[]},
+    {"id":"zombie_north","classname":"tf_zombie_spawner","origin":[0,704,32],"keys":{"targetname":"zombie_north","TeamNum":"3","zombie_lifetime":"0","max_zombies":"1","infinite_zombies":"1","zombie_type":"0"},"outputs":[]},
+    {"id":"zombie_east","classname":"tf_zombie_spawner","origin":[704,0,32],"keys":{"targetname":"zombie_east","TeamNum":"3","zombie_lifetime":"0","max_zombies":"1","infinite_zombies":"1","zombie_type":"0"},"outputs":[]},
+    {"id":"zombie_west","classname":"tf_zombie_spawner","origin":[-704,0,32],"keys":{"targetname":"zombie_west","TeamNum":"3","zombie_lifetime":"0","max_zombies":"1","infinite_zombies":"1","zombie_type":"0"},"outputs":[]},
+    {"id":"horde_warning","classname":"ambient_generic","origin":[0,0,128],"keys":{"targetname":"horde_warning","message":"music/zombat/snare_horde_01_01a.wav","health":"10","preset":"0","pitch":"100","pitchstart":"100","radius":"1800","spawnflags":"49"},"outputs":[]},
+    {"id":"arena_light_center","classname":"light","origin":[0,0,420],"keys":{"targetname":"arena_light_center","_light":"255 224 184 750","style":"0"},"outputs":[]},
+    {"id":"arena_light_north","classname":"light","origin":[0,720,400],"keys":{"targetname":"arena_light_north","_light":"255 190 145 450","style":"0"},"outputs":[]},
+    {"id":"arena_light_east","classname":"light","origin":[720,0,400],"keys":{"targetname":"arena_light_east","_light":"255 190 145 450","style":"0"},"outputs":[]},
+    {"id":"arena_light_west","classname":"light","origin":[-720,0,400],"keys":{"targetname":"arena_light_west","_light":"255 190 145 450","style":"0"},"outputs":[]},
+    {"id":"map_boot","classname":"logic_auto","origin":[0,0,0],"keys":{"targetname":"map_boot","spawnflags":"1"},"outputs":[
+      {"event":"OnMapSpawn","target":"zombie_north","input":"Disable","parameter":"","delay":"0","times":"1"},
+      {"event":"OnMapSpawn","target":"zombie_east","input":"Disable","parameter":"","delay":"0","times":"1"},
+      {"event":"OnMapSpawn","target":"zombie_west","input":"Disable","parameter":"","delay":"0","times":"1"}
+    ]}
+  ]
+}

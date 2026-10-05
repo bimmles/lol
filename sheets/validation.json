@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "checks": {
+    "preflight": "all sheet cells populated; all generated entity ids unique; every I/O target resolves",
+    "gameInstall": "TF2 and L4D2 install/build folders detected; stock referenced materials verified in TF2 VPKs",
+    "compile": "VBSP, VVIS and VRAD produce zf_fourcorners.bsp without compiler errors",
+    "gameplay": "private -insecure launch; spawn as RED; see the 60-second setup, L4D2 warning, and escalating skeleton attacks",
+    "multiplayer": "host and join using two running copies; verify four-player max and the tested Steam join path",
+    "media": "capture the built arena running in TF2; never include a token or private window",
+    "melty": "inspect package, validate recipe, one_click_check, and install/test in the Melty app before submitting"
+  },
+  "releaseGates": ["gameplay", "multiplayer", "media", "melty", "credits-license-remix-choice"]
+}

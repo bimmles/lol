@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "systems": [
+    {
+      "id": "fortify",
+      "struct": "FortifyPhase",
+      "trigger": "team_round_timer.OnSetupFinished",
+      "durationSeconds": 60,
+      "playerActivity": "choose any TF2 class and place Engineer buildings in the arena before the first skeletons arrive",
+      "verifiedFrom": "TF2 team_round_timer FGD documents setup_length and OnSetupFinished; player choice specified in conversation"
+    },
+    {
+      "id": "holdout_clock",
+      "struct": "HoldoutClock",
+      "trigger": "team_round_timer",
+      "durationSeconds": 300,
+      "winTarget": "round_win",
+      "verifiedFrom": "TF2 team_round_timer and game_round_win FGD definitions"
+    },
+    {
+      "id": "horde_escalation",
+      "struct": "HordeEscalation",
+      "trigger": "team_round_timer.On3MinRemain, team_round_timer.On1MinRemain",
+      "entranceCount": 3,
+      "activeSkeletonsPerEntrance": [1, 2, 3],
+      "zombieEntity": "tf_zombie_spawner",
+      "verifiedFrom": "TF2 tf_zombie_spawner FGD documents infinite_zombies and SetMaxActiveZombies"
+    },
+    {
+      "id": "l4d2_horde_warning",
+      "struct": "L4D2HordeWarning",
+      "sourceGame": "left-4-dead-2",
+      "sourceRelativePath": "left4dead2/sound/music/zombat/snare_horde_01_01a.wav",
+      "targetEntity": "horde_warning",
+      "trigger": "team_round_timer.OnSetupFinished",
+      "assetHandling": "read from the player's local L4D2 installation and stage into TF2 custom content at launch; never bundle the Valve sound",
+      "verifiedFrom": "L4D2 source file is present locally; TF2 ambient_generic FGD accepts direct WAV paths; runtime staging and Melty launch remain to be tested"
+    }
+  ]
+}
