@@ -1,0 +1,12 @@
+{
+  "status": "candidate; not runtime-tested or publishable",
+  "archive": "holdout-four-corners-candidate.zip",
+  "bytes": 120773,
+  "sha256": "c9dd4ba6ad7987798ee89104c0c1f9792915d0c658f9b05f83f94cc0431f8eb6",
+  "entries": [
+    "README.md",
+    "launcher/FourCornersLauncher.exe",
+    "tf/custom/holdout_fourcorners/maps/zf_fourcorners.bsp"
+  ],
+  "redistributedValveGameAssets": false
+}
